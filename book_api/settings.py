@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-c(ngcyj)v=x7$qkplj1c^(kl9^n2ejm!(cn%$swapz3u#29@!b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'book_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DATABASE_ENGINE'),
-        'NAME': os.getenv('DATABASE_NAME'),
-        'USER': os.getenv('DATABASE_USER'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-        'HOST': os.getenv('DATABASE_HOST'),
-        'PORT': os.getenv('DATABASE_PORT'),
+        'ENGINE': 'django.db.backends.postgresql',  # Здесь указывается используемый движок базы данных
+        'NAME': 'postgres',  # Здесь указывается имя базы данных
+        'USER': 'postgres',  # Здесь указывается имя пользователя базы данных
+        'PASSWORD': 'postgres',  # Здесь указывается пароль пользователя базы данных
+        'HOST': 'postgres',
+        'PORT': '5432',  # Здесь указывается порт базы данных
     }
 }
 
